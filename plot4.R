@@ -48,13 +48,8 @@ plot4 <- function(filetxt = "household_power_consumption.txt"){
     legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col = c("black", "red", "blue"), lty=1,bty = "n")
     #######################################################################
     days$Global_reactive_power <- as.numeric(as.character(days$Global_reactive_power))
-    plot(days$Global_reactive_power, type = "h", xaxt = "n", xlab="datetime", ylab = "Global_reactive_power", width = 1)
+    plot(days$Global_reactive_power, type = "l", xaxt = "n", xlab="datetime", ylab = "Global_reactive_power")
     axis(1, at = c(0, 1440, 2880), labels= c("Thu", "Fri", "Sat"))
 dev.off()    
     
-    
-    
 }
-    
-    
-    
